@@ -42,15 +42,16 @@ if __name__ == '__main__':
     for team in team_list:
         all_teams.append(get_roster(team))
 
+    #keeping my key hidden   
     client = boto3.client(
         'dynamodb',
-        aws_access_key_id='AKIAVWFDYEZFMZAQKNJX',
-        aws_secret_access_key='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',
+        aws_access_key_id='****', 
+        aws_secret_access_key='****', 
     )
     resource = boto3.resource(
         'dynamodb',
-        aws_access_key_id='AKIAVWFDYEZFMZAQKNJX',
-        aws_secret_access_key='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',
+        aws_access_key_id='****',
+        aws_secret_access_key='****',
     )
     for team in all_teams:
         players = team[0]
