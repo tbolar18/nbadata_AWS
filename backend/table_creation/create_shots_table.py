@@ -35,15 +35,17 @@ def create_roster_table(client, exceptions):
 
 
 if __name__ == '__main__':
+    
+    #keeping my key hidden
     client = boto3.client(
         'dynamodb',
-        aws_access_key_id='AKIAVWFDYEZFMZAQKNJX',
-        aws_secret_access_key='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',
+        aws_access_key_id='****',
+        aws_secret_access_key='****',
     )
     resource = boto3.resource(
         'dynamodb',
-        aws_access_key_id='AKIAVWFDYEZFMZAQKNJX',
-        aws_secret_access_key='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',
+        aws_access_key_id=='****',
+        aws_secret_access_key=='****',
     )
     ddb_exceptions = client.exceptions
     shots_table = create_roster_table(client,ddb_exceptions)
