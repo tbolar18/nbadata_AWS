@@ -101,15 +101,17 @@ def query_for_players(client):
 
 
 if __name__ == '__main__':
+    
+    #keeping my key hidden
     client = boto3.client(
         'dynamodb',
-        aws_access_key_id='AKIAVWFDYEZFMZAQKNJX',
-        aws_secret_access_key='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',
+        aws_access_key_id='****',
+        aws_secret_access_key='****',
     )
     resource = boto3.resource(
         'dynamodb',
-        aws_access_key_id='AKIAVWFDYEZFMZAQKNJX',
-        aws_secret_access_key='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',
+        aws_access_key_id=='****',
+        aws_secret_access_key=='****',
     )
     teams = json.loads(requests.get('https://raw.githubusercontent.com/bttmly/nba/master/data/teams.json').text)
     players = json.loads(requests.get('https://raw.githubusercontent.com/bttmly/nba/master/data/players.json').text)
